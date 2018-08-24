@@ -44,7 +44,7 @@ title: 'Steve Redka'
     %h3= link_to entry[:title], entry[:url]
     / .picture{:style => 'background-image:url(' + portfolio_image_url(entry, 'small') + ')'}
 
-- portfolios.each_with_index do |entry, i|
+- sorted_portfolios.each_with_index do |entry, i|
   .row{:class => i.odd? ? 'row-white' : 'row-grey'}
     .col-sm-8.col-sm-offset-2
       .row.work-item-row

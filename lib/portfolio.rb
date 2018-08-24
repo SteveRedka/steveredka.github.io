@@ -4,7 +4,7 @@ module PortfolioHelper
   end
 
   def sorted_portfolios
-    portfolios.sort_by { |p| attribute_to_time(p[:created_at]) }.reverse
+    portfolios.sort_by { |p| attribute_to_time(p[:date]) }.reverse
   end
 
   def portfolio_image_url(item, type)
