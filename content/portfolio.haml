@@ -1,64 +1,41 @@
 ---
 title: 'Steve Redka'
 ---
+.bg
+  / About
 
-/ About
+  .container-fluid
+    .text-center
+      %img.profile-pic{src: "/img/portrait.jpg", width: "200"}/
+      %h1 Steve Redka
+      %h3 Ruby on Rails developer
+      %h5 Dancer/witch also
+      .text-center.social-icons
+        %a{href: "mailto:cogitofallacy@gmail.com", target: "_blank"}
+          %i.far.fa-envelope
+        %a{href: "https://github.com/SteveRedka", target: "_blank"}
+          %i.fab.fa-github-square
 
-/ .container-fluid
-/   .text-center
-/     %img.profile-pic{src: "/img/portrait.jpg", width: "200"}/
-/     %h1 Steve Redka
-/     %h3 Ruby on Rails developer
-/     %h5 Dancer/witch also
-/     .text-center.social-icons
-/       %a{href: "mailto:cogitofallacy@gmail.com", target: "_blank"}
-/         %i.far.fa-envelope
-/       %a{href: "https://github.com/SteveRedka", target: "_blank"}
-/         %i.fab.fa-github-square
+  / Portfolio
 
-/ Portfolio
+  - sorted_portfolios.each_with_index do |entry, i|
+    .row{:class => i.odd? ? 'row-white' : 'row-grey'}
+      .col-sm-8.col-sm-offset-2
+        .row.work-item-row
+          .col-lg-8
+            %img.img-responsive.center-block.portfolio-photo{src: "../portfolio_photos/#{entry[:photo_id]}"}
+          .col-lg-4
+            %h2
+              %h3= link_to entry[:title], entry[:url]
+            %div= entry[:description]
+            - if entry[:role]
+              %h3 Role
+              %div= entry[:role]
+        .row.text-center
+          .col-xs-12
+            - entry[:tech_logos].each do |logo|
+              %img.techlogo{src: "../tech_logos/#{logo}", width: "100"}/
+        .row.text-center{style: "margin:20px;"}
+          %a.btn.btn-launch{href: entry[:url], target: "blank"} Go to app
 
-.row.row-grey
-  .col-sm-8.col-sm-offset-2
-    .row.work-item-row
-      .col-lg-8
-        %img.img-responsive.center-block{src: "img/mydeliverypal.png"}/
-      .col-lg-4
-        %h2
-          %a{href: "https://play.google.com/store/apps/details?id=com.chrisdermody.mydeliverypal&hl=en", target: "blank"} My Delivery Pal
-        %p An Android application for delivery drivers and couriers, making them faster and more efficient at their job
-        %h4 Technology
-        %p Delivery Pal is build with Ionic, Angular, and Firebase for real-time location tracking. Integrating with the Google Maps API for address lookup and navigation. A Node.js server hosted on Heroku acts as a middle-man, handling backend logic and database updates within Firebase
-    .row.text-center
-      .col-xs-12
-        %img.techlogo{src: "img/techlogos/ionic.png", width: "100"}/
-        %img.techlogo{src: "img/techlogos/angular.png", width: "100"}/
-        %img.techlogo{src: "img/techlogos/node.png", width: "100"}/
-        %img.techlogo{src: "img/techlogos/heroku.png", width: "100"}/
-        %img.techlogo{src: "img/techlogos/firebase.png", width: "100"}/
-    .row.text-center{style: "margin:20px;"}
-      %a.btn.btn-launch{href: "https://play.google.com/store/apps/details?id=com.chrisdermody.mydeliverypal&hl=en", target: "blank"} Go to app
-
-- portfolios.each do |entry|
-  .portfolio-entry
-    %h3= link_to entry[:title], entry[:url]
-    / .picture{:style => 'background-image:url(' + portfolio_image_url(entry, 'small') + ')'}
-
-- sorted_portfolios.each_with_index do |entry, i|
-  .row{:class => i.odd? ? 'row-white' : 'row-grey'}
-    .col-sm-8.col-sm-offset-2
-      .row.work-item-row
-        .col-lg-8
-          %img.img-responsive.center-block{src: "img/mydeliverypal.png"}/
-        .col-lg-4
-          %h2
-            %h3= link_to entry[:title], entry[:url]
-          %div= entry[:bark]
-      .row.text-center
-        .col-xs-12
-          - entry[:tech_logos].each do |logo|
-            %img.techlogo{src: "../tech_logos/#{logo}", width: "100"}/
-      .row.text-center{style: "margin:20px;"}
-        %a.btn.btn-launch{href: entry[:url], target: "blank"} Go to app
-
-/ Tools
+  / Tools

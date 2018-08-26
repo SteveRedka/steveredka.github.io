@@ -5,3 +5,23 @@
   color: black;
   text-decoration: none;
 }
+
+.portfolio-photo {
+  max-height: 300px;
+}
+
+/*.bg {
+  background-image: url('../img/bg.jpg');
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.row.row-white {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.row.row-grey {
+  background-color: rgba(211, 211, 211, 0.95);
+}
+*/
