@@ -5,7 +5,13 @@ text_extensions: [ 'adoc', 'asciidoc', 'atom', 'coffee', 'css', 'erb', 'haml', '
 
 prune:
   auto_prune: true
+  exclude: [ '.git' ]
 
 data_sources:
   - type: filesystem
     encoding: utf-8
+
+deploy:
+  default:
+    kind: git
+    branch: master
