@@ -1,5 +1,5 @@
 ---
-photo_id: sociaball.png
+photo_id: sb.jpg
 title: Sociaball
 url: http://sociaball.com
 description: 'App helping people to organise casual games of football, basketball, basketball etc..'
@@ -10,4 +10,5 @@ tech_logos:
   - rails.png
   - docker.png
   - mina.png
+  - google_maps.png
 ---

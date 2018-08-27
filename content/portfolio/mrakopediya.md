@@ -1,7 +1,7 @@
 ---
-photo_id: homeeasy
+photo_id: 203316-05-02_17-11-27.png
 title: Mrakopediya
-url: http://homeeasy.com
+url: http://mrakopedia.org
 description: 'Russian encyclopedia dedicated to collection and study of dark folklore. Built on Mediawiki.'
 role: 'Founder'
 kind: portfolio

@@ -26,7 +26,7 @@ title: 'Steve Redka'
             %img.img-responsive.center-block.portfolio-photo{src: "../portfolio_photos/#{entry[:photo_id]}"}
           .col-lg-4
             %h2
-              %h3= link_to entry[:title], entry[:url]
+              %h3= entry[:url] ? link_to(entry[:title], entry[:url]) : entry[:title]
             %div= entry[:description]
             - if entry[:role]
               %h3 Role
@@ -35,7 +35,9 @@ title: 'Steve Redka'
           .col-xs-12
             - entry[:tech_logos].each do |logo|
               %img.techlogo{src: "../tech_logos/#{logo}", width: "100"}/
-        .row.text-center{style: "margin:20px;"}
-          %a.btn.btn-launch{href: entry[:url], target: "blank"} Go to app
+        - if entry[:url]
+          .row.text-center{style: "margin:20px;"}
+            %a.btn.btn-launch{href: entry[:url], target: "blank"} Go to app
 
   / Tools
+f
