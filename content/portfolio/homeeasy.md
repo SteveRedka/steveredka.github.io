@@ -11,4 +11,6 @@ tech_logos:
   - sass.png
   - coffeescript.png
   - google_maps.png
+  - heroku.png
+weight: 10
 ---

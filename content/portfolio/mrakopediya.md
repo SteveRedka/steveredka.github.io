@@ -8,4 +8,5 @@ kind: portfolio
 date: 02-02-2018
 tech_logos:
   - mediawiki.png
+weight: 100
 ---

@@ -11,4 +11,5 @@ tech_logos:
   - docker.png
   - mina.png
   - google_maps.png
+weight: 20
 ---
