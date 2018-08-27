@@ -26,7 +26,7 @@ title: 'Steve Redka'
             %img.img-responsive.center-block.portfolio-photo{src: "../portfolio_photos/#{entry[:photo_id]}"}
           .col-lg-4
             %h2
-              %h3= entry[:url] ? link_to(entry[:title], entry[:url]) : entry[:title]
+              %h3= entry[:url] ? link_to(entry[:title], entry[:url], target: "blank") : entry[:title]
             %div= entry[:description]
             - if entry[:role]
               %h3 Role
@@ -39,16 +39,14 @@ title: 'Steve Redka'
           .row.text-center{style: "margin:20px;"}
             %a.btn.btn-launch{href: entry[:url], target: "blank"} Go to app
 
-  / Tools
-.row.row-tools.row-white
-  .col-sm-12.text-center
-    %h3 Tools I Use
-    %img.techlogo{src: "../tech_logos/rails.png", width: "150"}/
-    %img.techlogo{src: "../tech_logos/git.png", width: "150"}/
-    %img.techlogo{src: "../tech_logos/sublime.png", width: "150"}/
 .row.row-footer.text-center
   .col
-    %div{style: "margin:50px;"}
-      %h3{style: "margin:50px 0 15px"} I'm available for work, get in touch
+    %div.questions{style: "margin:0 50px;"}
+      %h2 Drop me a letter if you:
+      %p Have an awesome idea for a project
+      %p Your Rails app stopped working
+      %p You need to add extra features
+      %p Your previous developer left silently and you need a reliable one
+      %p Ruby stuff in general
       %a{href: "mailto:cogitofallacy@gmail.com", target: "_blank"}
         cogitofallacy@gmail.com

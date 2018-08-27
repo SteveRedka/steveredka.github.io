@@ -13,5 +13,5 @@ tech_logos:
   - google_maps.png
   - heroku.png
   - aws.png
-weight: 10
+weight: 110
 ---
