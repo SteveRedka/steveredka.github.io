@@ -12,5 +12,6 @@ tech_logos:
   - coffeescript.png
   - google_maps.png
   - heroku.png
+  - aws.png
 weight: 10
 ---

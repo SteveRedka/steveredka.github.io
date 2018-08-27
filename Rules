@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-compile '/index.html' do
+compile '/index.html.haml' do
+ filter :haml
   layout '/default.*'
   write '/index.html'
 end
