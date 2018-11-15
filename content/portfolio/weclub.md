@@ -8,5 +8,6 @@ kind: portfolio
 date: 02-02-2018
 tech_logos:
   - rails.png
-weight: 10
+  - sinatra.png
+weight: 110
 ---
